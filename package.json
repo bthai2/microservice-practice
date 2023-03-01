@@ -1,0 +1,23 @@
+{
+  "name": "microservice-practice",
+  "version": "1.0.0",
+  "description": "This is a simple microservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "latest-version": "^7.0.0",
+    "node-fetch": "^3.3.0",
+    "supertest": "^6.3.3"
+  },
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}
