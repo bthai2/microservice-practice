@@ -6,6 +6,16 @@ const port = 3000
 // app.use(express.json());
 // app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => res.send('Hello World!'));
+var joke = {}
+
+const getData = async () => {
+    const res = await fetch('https://v2.jokeapi.dev/joke/Any');
+    joke = res.json();
+}
+
+app.get('/', (req, res) => {
+    getData();
+    res.send(joke);
+});
 
 module.exports = app;
