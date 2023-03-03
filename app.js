@@ -3,8 +3,8 @@ const app = express()
 const bodyParser = require('body-parser');
 const port = 3000
 // const fetch = require('node-fetch');
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 var joke = {}
 
