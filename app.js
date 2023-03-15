@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 const port = 3000
 
 // const data = require('./data.json');
-// const fetch = require('node-fetch');
-import fetch from 'node-fetch';
+const fetch = require('node-fetch');
+// import fetch from 'node-fetch';
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
