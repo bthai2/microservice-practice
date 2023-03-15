@@ -69,7 +69,6 @@ app.get('/', (req, res) => {
 });
 
 module.exports = app;
-<<<<<<< HEAD
 
 // maybe location_area_encounters
 
@@ -78,6 +77,3 @@ module.exports = app;
 // stats
 
 // types
-
-=======
->>>>>>> add62fe4833f4ed23adcff21c7e09ad470fa9dc4
