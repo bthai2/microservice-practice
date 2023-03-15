@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const port = 3000
 
 // const data = require('./data.json');
-const fetch = require('node-fetch');
+// const fetch = require('node-fetch');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -64,8 +64,8 @@ function cleanData() {
 }
 
 app.get('/', (req, res) => {
-    res.send(cleanData());
-    // res.send(data);
+    // res.send(cleanData());
+    res.send(data);
 });
 
 module.exports = app;
