@@ -5,8 +5,8 @@ const port = 3000
 
 // const data = require('./data.json');
 // const fetch = require('node-fetch');
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 var data = {};
 
@@ -69,6 +69,7 @@ app.get('/', (req, res) => {
 });
 
 module.exports = app;
+<<<<<<< HEAD
 
 // maybe location_area_encounters
 
@@ -78,3 +79,5 @@ module.exports = app;
 
 // types
 
+=======
+>>>>>>> add62fe4833f4ed23adcff21c7e09ad470fa9dc4
