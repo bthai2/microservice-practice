@@ -13,11 +13,19 @@ var data = {};
 
 var checkData = false;
 
+const url = 'https://www.pollen.com/api/forecast/current/pollen/20111';
+
 const getData = async () => {
     if(!checkData) {
-        const res = await fetch('https://pokeapi.co/api/v2/pokemon/35/');
+        const res = await fetch(url, {
+            headers: { 'Accept-Encoding': 'gzip, deflate, br',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept': 'application/json, text/plain, */*',
+            'Referer': url}
+        });
         // const res = await fetch('./data.json');
         data = await res.json();
+        console.log(data)
     }
 }
 
@@ -26,6 +34,17 @@ getData().then(() => {
 }).catch(error => {
     console.log(error);
 })
+
+
+// const user_agent = 
+//     'Mozilla/5.0 (X11; Linux x86_64)'
+
+// fetch(url, {
+//     headers: { 'Accept-Encoding': 'gzip, deflate, br',
+//     'Accept-Language': 'en-US,en;q=0.9',
+//     'Accept': 'application/json, text/plain, */*',
+//     'Referer': url}
+// }).then(res => res.json()).then(console.log(res))
 
 // function to extract info needed from whole dataset
 function cleanData() {
@@ -65,9 +84,13 @@ function cleanData() {
 }
 
 app.get('/', (req, res) => {
-    // res.send(cleanData());
-    res.send(data);
+    res.send('Hello');
+    // res.send(data);
 });
+
+app.get('/data/:id', (req, res) => {
+    //checkData
+})
 
 module.exports = app;
 
